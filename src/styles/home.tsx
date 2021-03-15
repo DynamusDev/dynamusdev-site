@@ -46,7 +46,7 @@ export const About = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  width: 45%;
+  width: 35%;
   height: 100%;
 
   p {
@@ -83,7 +83,7 @@ export const AboutMe = styled.div`
   justify-content: center;
   padding: 15px;
 
-  width: 55%;
+  width: 45%;
   height: 100%;
 
   h1 {
