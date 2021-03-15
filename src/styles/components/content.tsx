@@ -5,7 +5,6 @@ export const Container = styled.div`
   width: 80vw;
 
   display: flex;
-  overflow: scroll;
 
   /* @media (max-width: 375px){
     flex-direction: column;

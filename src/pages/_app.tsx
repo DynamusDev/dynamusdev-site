@@ -1,22 +1,22 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import GlobalStyle from '../styles/global'
 import { ThemeProvider } from 'styled-components'
 import { dark, light } from '../theme/theme'
 import { ThemeContextProvider } from '../_context/themeContext'
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState(light) ;
-  
+  const [theme, setTheme] = useState(light);
+
   useEffect(() => {
     const localTheme = localStorage.getItem('theme');
-    if(localTheme === 'dark'){
+    if (localTheme === 'dark') {
       setTheme(dark)
-    }else{
+    } else {
       setTheme(light)
     }
   }, [])
 
-  const contextProps = {
+  const contextProps: object = {
     theme,
     setTheme
   }
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
     </ThemeContextProvider>
-    )
+  )
 }
 
 export default MyApp
