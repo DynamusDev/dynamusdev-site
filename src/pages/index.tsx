@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
+
+import Lottie from 'react-lottie';
+import game from '../../public/icons/game.json';
+import full from '../../public/icons/full.json';
+
 
 import { Header, Screen, Button, Content } from '../components';
 import { Container, Title, Card, About, Avatar, AboutMe, Photo, Subtitle, Resume } from '../styles/home';
-import { color } from '../theme/color';
 
 export default function Home() {
+  const [isStopped, setIsStopped] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const gameOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: game,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const fullOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: full,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   return (
     <Container>
       <Head>
@@ -15,15 +39,20 @@ export default function Home() {
         title='Alexandre'
         buttons={
           <>
-            <Button name='Home'/>
-            <Button name='Projetos'/>
-            <Button name='Tips'/>
+            <Button name='Home' />
+            <Button name='Projetos' />
+            <Button name='Tips' />
           </>
         }
       />
       <Content>
         <Screen>
           <Card>
+            <Lottie options={fullOptions}
+              height={200}
+              width={200}
+              isStopped={isStopped}
+              isPaused={isPaused} />
             <About>
               <Title>Eu sou Alexandre Nascimento</Title>
               <p>Desenvolvedor Full-Stack</p>
@@ -35,15 +64,20 @@ export default function Home() {
             />
           </Card>
           <Card>
+            <Lottie options={gameOptions}
+              height={200}
+              width={200}
+              isStopped={isStopped}
+              isPaused={isPaused} />
             <AboutMe>
               <Subtitle>Sobre mim</Subtitle>
               <h1>Sou Desenvolvedor Full-Stack</h1>
-              <p>Baiano, nerd, casado, 25 anos.<br/>
-                Apaixonado por tecnologia e em como ela se atualiza e se torna necessária no dia a dia. <br/>
-                Atualmente morando em São Paulo.<br/>
-                Realizo também um trabalho como membro gestor do coletivo @pretxs_no_topo. <br/>
-                <br/>
-                "A imaginação é mais importante que a ciência, porque a ciência é limitada,<br/> ao passo que a imaginação abrange o mundo inteiro." - Albert Einstein
+              <p>Baiano, nerd, casado, 25 anos.<br />
+                Apaixonado por tecnologia e em como ela se atualiza e se torna necessária no dia a dia. <br />
+                Atualmente morando em São Paulo.<br />
+                Realizo também um trabalho como membro gestor do coletivo @pretxs_no_topo. <br />
+                <br />
+                "A imaginação é mais importante que a ciência, porque a ciência é limitada,<br /> ao passo que a imaginação abrange o mundo inteiro." - Albert Einstein
               </p>
             </AboutMe>
             <Photo
@@ -51,7 +85,7 @@ export default function Home() {
               alt="Avatar"
             />
           </Card>
-          <Card style={{flexDirection: 'column', padding: 8}}>
+          <Card style={{ flexDirection: 'column', padding: 8 }}>
             <Subtitle>Resumo</Subtitle>
             <Card>
               <Resume>

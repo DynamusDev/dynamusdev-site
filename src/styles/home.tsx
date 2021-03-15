@@ -71,8 +71,8 @@ export const About = styled.div`
 `;
 
 export const Avatar = styled(Image).attrs({
-  width:250,
-  height:250,
+  width: 250,
+  height: 250,
 })`
   border-radius: 30px;
 `;
@@ -101,8 +101,8 @@ export const AboutMe = styled.div`
 `;
 
 export const Photo = styled(Image).attrs({
-  width:400,
-  height:400,
+  width: 400,
+  height: 400,
 })`
 `;
 
