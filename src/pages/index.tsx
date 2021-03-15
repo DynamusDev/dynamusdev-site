@@ -48,30 +48,21 @@ export default function Home() {
       <Content>
         <Screen>
           <Card>
+            <About>
+              <Title>Alexandre Nascimento</Title>
+              <p>Sou Desenvolvedor Full-Stack</p>
+              <button> <p>Sobre mim</p> </button>
+            </About>
             <Lottie options={fullOptions}
               height={200}
               width={200}
               isStopped={isStopped}
-              isPaused={isPaused} />
-            <About>
-              <Title>Eu sou Alexandre Nascimento</Title>
-              <p>Desenvolvedor Full-Stack</p>
-              <button> <p>Sobre mim</p> </button>
-            </About>
-            <Avatar
-              src="/images/foto.jpg"
-              alt="Avatar"
+              isPaused={isPaused}
             />
           </Card>
           <Card>
-            <Lottie options={gameOptions}
-              height={200}
-              width={200}
-              isStopped={isStopped}
-              isPaused={isPaused} />
             <AboutMe>
               <Subtitle>Sobre mim</Subtitle>
-              <h1>Sou Desenvolvedor Full-Stack</h1>
               <p>Baiano, nerd, casado, 25 anos.<br />
                 Apaixonado por tecnologia e em como ela se atualiza e se torna necessária no dia a dia. <br />
                 Atualmente morando em São Paulo.<br />
@@ -80,8 +71,8 @@ export default function Home() {
                 "A imaginação é mais importante que a ciência, porque a ciência é limitada,<br /> ao passo que a imaginação abrange o mundo inteiro." - Albert Einstein
               </p>
             </AboutMe>
-            <Photo
-              src="/images/salvador.jpeg"
+            <Avatar
+              src="/images/foto.jpg"
               alt="Avatar"
             />
           </Card>

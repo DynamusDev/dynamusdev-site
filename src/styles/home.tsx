@@ -45,8 +45,9 @@ export const About = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 35px;
 
-  width: 35%;
+  width: 55%;
   height: 100%;
 
   p {
@@ -81,9 +82,8 @@ export const AboutMe = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px;
 
-  width: 45%;
+  width: 75%;
   height: 100%;
 
   h1 {
