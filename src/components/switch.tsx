@@ -19,10 +19,11 @@ export function Switch() {
     <SW
       onChange={toggleDarkMode}
       checked={theme.title === 'dark' ? true : false}
-      checkedIcon={<FiMoon size={25} color='#DADADA' />}
-      uncheckedIcon={<FiSun size={25} color='#DADADA' />}
+      checkedIcon={<FiMoon size={20} color='#DADADA' />}
+      uncheckedIcon={<FiSun size={20} color='#DADADA' />}
       theme={theme}
-      offColor={shade(0.05, '#000044')}
+      className='switch'
+      offColor={shade(0.05, '#121214')}
       onColor={color.grey}
     />
   )

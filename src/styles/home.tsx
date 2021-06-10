@@ -30,12 +30,13 @@ export const Card = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 15px;
 
   background-color: ${props => props.theme.colors.header};
 
   height: auto;
   min-height: 350px;
-  width: 98%;
+  width: 100%;
 
   margin-top: 30px;
   border-radius: 8px;
@@ -45,7 +46,6 @@ export const About = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 35px;
 
   width: 55%;
   height: 100%;

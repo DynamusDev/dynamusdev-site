@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { FiArrowLeft, FiFile, FiX } from 'react-icons/fi';
 
 export const Head = styled.header`
-  width: 78vw;
+  width: 100%;
   height: 60px;
-  padding: 15px;
+  padding: 0 15px;
 
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ export const ButtonsContainer = styled.div`
     margin-top: 10px;
     color: ${props => props.theme.colors.text};
 
-    width: 300px;
+    width: auto;
     height: 20px;
 
     background-color: transparent;
